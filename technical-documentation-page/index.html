@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation Viewer</title>
+    <link rel="stylesheet" href="./tidy.css">
+</head>
+
+<body>
+    <div class="columns is-gapless">
+        <div id="navbar-container" class="column is-2-desktop is-2-tablet is-fixed sidebar minir">
+            <nav id="navbar" class="menu sidebar">
+                <header class="title">CSS Basics</header>
+                <p class="menu-label">
+                    CSS Basics
+                </p>
+                <ul class="menu-list">
+                    <li><a href="#Summary" class="nav-link">Summary</a></li>
+                    <li><a href="#What_is_CSS" class="nav-link">What is CSS</a></li>
+                    <li><a href="#Anatomy_of_a_CSS_ruleset" class="nav-link">Anatomy of a CSS ruleset</a></li>
+                    <li><a href="#Selecting_multiple_elements" class="nav-link">Selecting multiple elements</a></li>
+                    <li><a href="#Different_types_of_selectors" class="nav-link">Different types of selectors</a></li>
+                    <li><a href="#Reference" class="nav-link">Reference</a></li>
+                </ul>
+                <hr>
+                <p class="menu-label">
+                    <span class="author-name">
+                        <span class="author-name-sub">This doc viewer </span><span class="author-name-sub">made
+                            by:<br></span><span class="author-name-sub"><a href="https://limty.github.io"
+                                target="_blank"> Lim
+                                Thean Yew</a></span>
+                    </span>
+                </p>
+            </nav>
+        </div>
+        <main id="main-doc" class="column is-10-desktop">
+
+            <section class="main-section" id="Summary">
+                <header class="title">Summary</header>
+                <p>
+                    CSS (Cascading Style Sheets) is the code you use to style
+                    your webpage. <em>CSS basics</em> takes you through what you
+                    need to get started. We'll answer questions like: How do I
+                    make my text black or red? How do I make my content show up
+                    in such-and-such a place on the screen? How do I decorate my
+                    webpage with background images and colors?
+                </p>
+            </section>
+            <section class="main-section" id="What_is_CSS">
+                <header class="title">What is CSS</header>
+                <p>
+                    Like HTML, CSS is not really a programming language. It is
+                    not a <em>markup language</em> either — it is a
+                    <em>style sheet language</em>. This means that&nbsp;it lets
+                    you apply styles selectively to elements in HTML documents.
+                    For example, to select <strong>all</strong> the paragraph
+                    elements on an HTML page and turn the text within them red,
+                    you'd write this CSS:
+                </p>
+                <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+                <p>
+                    Let's try it out: paste those three lines of CSS into a new
+                    file in your text editor, and then save the file as
+                    <code class="language-css">style.css</code> in your
+                    <code class="language-css">styles</code> directory.
+                </p>
+
+                <p>
+                    But we still need to apply the CSS to your HTML document.
+                    Otherwise, the CSS styling won't affect how your browser
+                    displays the HTML document. (If you haven't been following
+                    on with our project, read
+                    <a href="https://developer.mozilla.org/en-us/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing
+                        with files</a>
+                    and
+                    <a href="https://developer.mozilla.org/en-us/Learn/Getting_started_with_the_web/HTML_basics">HTML
+                        basics</a>
+                    to find out what you need to do first.)
+                </p>
+
+                <ol>
+                    <li>
+                        Open your
+                        <code class="language-css">index.html</code> file and paste the
+                        following line somewhere in the head (that is, between
+                        the
+                        <a href="https://developer.mozilla.org/en-us/docs/Web/HTML/Element/head"
+                            title="The HTML <head> element contains machine-readable information (metadata) about the document, like its title, scripts, and style sheets.">
+                            <code class="language-css">&lt;head&gt;</code>
+                        </a>
+                        and
+                        <code class="language-css">&lt;/head&gt;</code> tags):<br>
+                        <code class="language-css">
+                                        &lt; link href=<span class="token string">"styles/style.css"</span> rel=<span class="token string">"stylesheet"</span> &gt;
+                                    </code>
+                    </li>
+                    <li>
+                        Save
+                        <code class="language-css">index.html</code> and load it in your
+                        browser. You should see something like this:
+                    </li>
+                </ol>
+                <p>
+                    <img class="responsive"
+                        alt="A mozilla logo and some paragraphs. The paragraph text has been styled red by our css."
+                        src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/website-screenshot-styled.png">If
+                    your paragraph text
+                    is
+                    now red, congratulations! You've
+                    just written your first successful CSS.
+                </p>
+            </section>
+            <section class="main-section" id="Anatomy_of_a_CSS_ruleset">
+                <header class="title">Anatomy of a CSS ruleset</header>
+                <p>Let's look at the above CSS in a bit more detail:</p>
+
+                <p>
+                    <img class="responsive" alt="CSS p declaration color red"
+                        src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png">
+                </p>
+                <p>
+                    The whole structure is called a
+                    <strong>rule set&nbsp;</strong>(but often "rule" for short).
+                    Note also the names of the individual parts:
+                </p>
+
+                <dl>
+                    <dt>Selector</dt>
+                    <dd>
+                        The HTML element name at the start of the rule set. It
+                        selects the element(s) to be styled (in this case,
+                        <a href="https://developer.mozilla.org/en-us/docs/Web/HTML/Element/p"
+                            title="The HTML <p> element represents a paragraph.">
+                            <code class="language-css">&lt;p&gt;</code>
+                        </a>
+                        elements). To style a different element, just change the
+                        selector.
+                    </dd>
+                    <dt>Declaration</dt>
+                    <dd>
+                        A single rule like
+                        <code
+                            class="language-css"><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></code>
+                        specifying
+                        which of the element's <strong>properties</strong><strong> </strong>you want to style.
+                    </dd>
+                    <dt>Properties</dt>
+                    <dd>
+                        Ways in which you can style a given HTML element. (In
+                        this case,
+                        <code class="language-css">color</code> is a property of the
+                        <a href="https://developer.mozilla.org/en-us/docs/Web/HTML/Element/p"
+                            title="The HTML <p> element represents a paragraph.">
+                            <code class="language-css">&lt;p&gt;</code>
+                        </a>
+                        elements.) In CSS, you choose which properties you want
+                        to affect in your rule.
+                    </dd>
+                    <dt>Property value</dt>
+                    <dd>
+                        To the right of the property after the colon, we have
+                        the <strong>property value</strong>, which&nbsp;chooses
+                        one out of many possible appearances for a given
+                        property (there are many
+                        <code class="language-css">color</code> values
+                        besides
+                        <code class="language-css">red</code>).
+                    </dd>
+                </dl>
+
+                <p>Note the other important parts of the syntax:</p>
+
+                <ul>
+                    <li>
+                        Each rule set (apart from the selector) must be wrapped
+                        in curly braces (
+                        <code
+                            class="language-css"><span class="token punctuation">{</span><span class="token punctuation">}</span></code>).
+                    </li>
+                    <li>
+                        Within each declaration, you must use a colon
+                        (
+                        <code class="language-css"><span class="token punctuation">:</span></code>) to separate the
+                        property from its
+                        values.
+                    </li>
+                    <li>
+                        Within each rule set, you must use a semicolon
+                        (
+                        <code class="language-css"><span class="token punctuation">;</span></code>) to separate each
+                        declaration from the
+                        next one.
+                    </li>
+                </ul>
+
+                <p>
+                    So to modify multiple property values at once, you just need
+                    to write them separated by semicolons, like this:
+                </p>
+                <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p</span> <span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token property">width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">;</span>
+<span class="token property">border</span><span class="token punctuation">:</span> 1px solid black<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+            </section>
+            <section class="main-section" id="Selecting_multiple_elements">
+                <header class="title">Selecting multiple elements</header>
+
+                <p>
+                    You can also select multiple types of elements and apply a
+                    single rule set to all of them. Include multiple selectors
+                    separated by commas. For example:
+                </p>
+                <pre class="language-css" tabindex="0"><code class="language-css"><span class="token selector">p, li, h1</span> <span class="token punctuation">{</span>
+<span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+            </section>
+            <section class="main-section" id="Different_types_of_selectors">
+                <header class="title">Different types of selectors</header>
+                <p>
+                    There are many different types of selectors. Above, we only
+                    looked at <strong>element selectors</strong>, which select
+                    all elements of a given type in the given HTML documents.
+                    But we can make more specific selections than that. Here are
+                    some of the more common types of selectors:
+                </p>
+
+                <table class="standard-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Selector name</th>
+                            <th scope="col">What does it select</th>
+                            <th scope="col">Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Element selector (sometimes called a tag or type
+                                selector)
+                            </td>
+                            <td>All HTML element(s) of the specified type.</td>
+                            <td>
+                                <code class="language-css">p</code><br>
+                                Selects
+                                <code class="language-css">&lt;p&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID selector</td>
+                            <td>
+                                The element on the page with the specified ID.
+                                On a given HTML page, it's a best practice to
+                                use one element per ID (and of course one ID per
+                                element) even though you are allowed to use same
+                                ID for multiple elements.
+                            </td>
+                            <td>
+                                <code class="language-css">#my-id</code><br>
+                                Selects
+                                <code class="language-css">&lt;p id=<span class="token string">"my-id"</span>&gt;</code>
+                                and
+                                <code class="language-css">&lt;a id=<span class="token string">"my-id"</span>&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Class selector</td>
+                            <td>
+                                The element(s) on the page with the specified
+                                class (multiple class instances can appear on a
+                                page).
+                            </td>
+                            <td>
+                                <code class="language-css">.my-class</code><br>
+                                Selects
+                                <code
+                                    class="language-css">&lt;p class=<span class="token string">"my-class"</span>&gt;</code>
+                                and
+                                <code
+                                    class="language-css">&lt;a class=<span class="token string">"my-class"</span>&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Attribute selector</td>
+                            <td>
+                                The element(s) on the page with the specified
+                                attribute.
+                            </td>
+                            <td>
+                                <code class="language-css">img[src]</code><br>
+                                Selects
+                                <code
+                                    class="language-css">&lt;img src=<span class="token string">"myimage.png"</span>&gt;</code>
+                                but
+                                not
+                                <code class="language-css">&lt;img&gt;</code>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pseudo-class selector</td>
+                            <td>
+                                The specified element(s), but only when in the
+                                specified state (e.g. being hovered over).
+                            </td>
+                            <td>
+                                <code
+                                    class="language-css"><span class="token property">a</span><span class="token punctuation">:</span>hover</code><br>
+                                Selects
+                                <code class="language-css">&lt;a&gt;</code>, but only when
+                                the mouse pointer is hovering over the link.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    There are many more selectors to explore, and you can find a
+                    more detailed list in our
+                    <a href="https://developer.mozilla.org/en-us/docs/Web/Guide/CSS/Getting_started/Selectors">Selectors
+                        guide</a>.
+                </p>
+            </section>
+            <section class="main-section" id="Reference">
+                <header class="title">Reference</header>
+                <p>
+                    All the documentation in this page is taken from MDN. More
+                    Information avaliable
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics"
+                        target="_blank">Here</a>.
+                </p>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
