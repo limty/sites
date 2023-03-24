@@ -1,0 +1,161 @@
+/* Variables */
+:root {
+  --primary-color: #4ba6c4;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Layout */
+header {
+  background-color: PaleTurquoise;
+  padding: 1rem;
+}
+
+.header__title {
+  white-space: nowrap;
+}
+
+main {
+  margin: 3rem auto 0;
+  padding: 1rem;
+  padding-top: 3rem;
+  background-color: PaleGreen;
+  border-radius: 1rem;
+  max-width: 720px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-form__field {
+  width: 80%;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form__radio-group,
+.contact-form__checkbox-group {
+  padding: 0.5rem;
+}
+
+.contact-form__input[type="text"],
+.contact-form__input[type="email"],
+.contact-form__input[type="number"],
+.contact-form__textarea,
+.contact-form__select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  resize: vertical;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus,
+.contact-form__select:focus {
+  outline: none;
+  box-shadow: 0 0 5px 1px #4ba6c4;
+}
+
+.contact-form__submit-button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form__submit-button:hover {
+  background-color: #368ea6;
+}
+
+.footer {
+  margin: 1.5rem;
+}
+
+.footer__text {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.header__subtitle {
+  margin-top: 0.15rem;
+  font-size: 1.2rem;
+}
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+  main {
+    margin: 2rem auto 0;
+    width: 95%;
+  }
+  .footer {
+    margin: 1rem;
+  }
+  .footer__attribution {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  main {
+    padding: 1rem 1.75rem;
+  }
+  .registration-form__field {
+    width: 100%;
+  }
+  .footer__attribution {
+    margin: 1rem 0;
+  }
+  .footer__attribution-sub {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    text-align: center;
+  }
+  .header__subtitle {
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+  .header__title-sub {
+    display: block;
+  }
+}

@@ -1,0 +1,121 @@
+<!-- Acknowledgements:
+FreeCodeCamp Survey Form
+https://codepen.io/freeCodeCamp/full/VPaoNP -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LTY Academy Survey Form</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title" id="title">
+            <span class="header__title-sub">LTY Academy </span>
+            <span class="header__title-sub">Survey Form</span>
+        </h1>
+        <p class="header__subtitle" id="description">Thank you for your feedback</p>
+    </header>
+
+    <main class="main">
+        <form class="contact-form" id="survey-form">
+            <div class="registration-form__field">
+                <label for="name" class="contact-form__label" id="name-label">Name:</label>
+                <input class="contact-form__input" type="text" name="name" id="name" placeholder="Enter your name"
+                    required>
+            </div>
+
+            <div class="registration-form__field">
+                <label for="email" class="contact-form__label" id="email-label">Email:</label>
+                <input class="contact-form__input" type="email" name="email" id="email" placeholder="Enter your email"
+                    required>
+            </div>
+
+            <div class="registration-form__field">
+                <label for="age" class="contact-form__label" id="number-label">Age (optional):</label>
+                <input class="contact-form__input" type="number" name="age" id="number" min="1" max="199"
+                    placeholder="Enter your age">
+            </div>
+
+            <div class="registration-form__field">
+                <label for="role" class="contact-form__label">Which option best describes your current role?</label>
+                <select id="dropdown" name="role" class="contact-form__select" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="registration-form__field">
+                <label class="contact-form__label">Would you recommend LTY Academy to a friend?</label>
+                <div class="contact-form__radio-group">
+                    <label class="contact-form__radio-label"><input name="user-recommend" value="definitely"
+                            type="radio" class="contact-form__radio-input" required>Definitely</label>
+                    <label class="contact-form__radio-label"><input name="user-recommend" value="maybe" type="radio"
+                            class="contact-form__radio-input">Maybe</label>
+                    <label class="contact-form__radio-label"><input name="user-recommend" value="not-sure" type="radio"
+                            class="contact-form__radio-input">Not sure</label>
+                </div>
+            </div>
+
+            <div class="registration-form__field">
+                <label for="mostLike" class="contact-form__label">What is your favourite feature of LTY Academy?</label>
+                <select id="mostLike" name="mostLike" class="contact-form__select" required>
+                    <option disabled selected value>Select an option</option>
+                    <option value="projects">Projects</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="community">Community</option>
+                    <option value="openSource">Open Source</option>
+                </select>
+            </div>
+
+            <div class="registration-form__field">
+                <label class="contact-form__label">What would you like to see improved?</label>
+                <div class="contact-form__checkbox-group">
+                    <label class="contact-form__checkbox-label"><input name="prefer[]" value="front-end-projects"
+                            type="checkbox" class="contact-form__checkbox-input">Front-end Projects</label>
+                    <label class="contact-form__checkbox-label"><input name="prefer[]" value="back-end-projects"
+                            type="checkbox" class="contact-form__checkbox-input">Back-end Projects</label>
+                    <label class="contact-form__checkbox-label"><input name="prefer[]" value="full-stack-projects"
+                            type="checkbox" class="contact-form__checkbox-input">Full-stack Projects</label>
+                </div>
+            </div>
+
+            <div class="registration-form__field">
+                <label for="comments" class="contact-form__label">Any comments or suggestions?</label>
+                <textarea class="contact-form__textarea" id="comments" name="comment"
+                    placeholder="Enter your comment/suggestion here..." rows="5"></textarea>
+            </div>
+
+            <div class="registration-form__field">
+                <button class="contact-form__submit-button" type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">
+            <span class="footer__attribution">
+                <span class="footer__attribution-sub">A demo of a reactive web form
+                    page by</span>
+                <span class="footer__attribution-sub"><a href="https://limty.github.io" target="_blank">Lim Thean
+                        Yew</a>.</span>
+            </span>
+            <span class="footer__attribution"><span class="footer__attribution-sub">Form text adapted from </span><span
+                    class="footer__attribution-sub"><a href="https://codepen.io/freeCodeCamp/full/VPaoNP"
+                        target="_blank"><i>FreeCodeCamp
+                            Survey Form Page</i></a>.</span></span>
+        </p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
