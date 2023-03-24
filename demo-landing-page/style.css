@@ -1,0 +1,299 @@
+html {
+  scroll-padding-top: 56px;
+}
+
+body {
+  background-color: AntiqueWhite;
+  font-family: "Helvetica", sans-serif;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #332419;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+header > a {
+  margin: auto 0;
+}
+
+#header-img {
+  height: 2rem;
+  width: 2rem;
+}
+
+#nav-bar-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.25rem auto;
+}
+
+#nav-bar-list li {
+  text-align: center;
+  padding: 5px 16px;
+  list-style: none;
+}
+
+#nav-bar-list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#nav-bar-list a:hover {
+  color: #cccccc;
+}
+
+#nav-bar-list a:active {
+  color: #37586f;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 53px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+#newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#form {
+  display: flex;
+  justify-content: center;
+}
+
+#email {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #332419;
+  border-radius: 3px;
+}
+
+.btn {
+  padding: 6px 12px;
+  background-color: #332419;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #5a3d2a;
+}
+
+#video-container {
+  position: relative;
+  overflow: hidden;
+  width: auto;
+  padding-top: 56.25%;
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid black;
+  width: 300px;
+  margin: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.level {
+  background-color: #332419;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0 50px;
+}
+
+footer > a {
+  margin: auto 0.25rem;
+}
+
+main a,
+footer a {
+  color: #332419;
+}
+
+main a:hover,
+footer a:hover {
+  color: #2b2b2b;
+}
+
+main a:active,
+footer a:active {
+  color: #37586f;
+}
+
+section#how-we-perfect-it {
+  width: 854px;
+  max-width: 95%;
+}
+
+section#buy-now {
+  width: 100%;
+}
+
+hr.separator {
+  border: 0;
+  border-top: 1px solid #000;
+  margin: 1rem 5rem;
+}
+
+.nav-link {
+  white-space: nowrap;
+}
+
+/* */
+#description-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+}
+
+.icon-item i {
+  margin-bottom: 10px;
+}
+
+.item-description {
+  text-align: center;
+}
+
+/**/
+#hero {
+  position: relative;
+  height: 600px;
+  width: 100%;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://i.imgur.com/tciVC56.jpg");
+  background-color: #290a0a;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: orangered;
+  backdrop-filter: blur(4px);
+  border-radius: 1.5rem;
+}
+
+.hero-text h1,
+.hero-text h2,
+.hero-text p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.5em;
+}
+
+/* */
+
+@media (max-width: 650px) {
+  body :not(header):not(.product) {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  #header-img {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  #nav-bar-list li {
+    padding: 0 8px;
+  }
+
+  #products {
+    flex-direction: column;
+  }
+
+  .product {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  footer {
+    padding: 10px 0;
+    margin: 0;
+  }
+  button.btn {
+    width: 45%;
+  }
+  hr.separator {
+    border: 0;
+    border-top: 2px solid #000;
+    margin: 1rem 1.5rem;
+  }
+}
