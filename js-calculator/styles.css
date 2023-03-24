@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh
+}
+
+.calculator-container {
+    height: 100%;
+    background-color: #232323
+}
+
+.calculator-perimeter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.calculator {
+    background-color: #8b0000;
+    padding: 15px;
+    border-radius: 10px
+}
+
+#display {
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 1.3em;
+    color: #fff;
+    background-color: #000;
+    font: 1.5em "Courier New", sans-serif
+}
+
+button {
+    color: #2f4f4f;
+    background-color: beige;
+    text-align: center;
+    font: small-caps 1.5em sans-serif;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px
+}
+
+.lty-name {
+    text-align: center;
+    margin: 12px auto 12px auto;
+    height: 20.5px
+}
+
+.lty-name a {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none
+}
+
+.lty-name a:hover {
+    color: #00bfff
+}
+
+.lty-name a:active {
+    color: #ff4500
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    line-height: 29px;
+    white-space: nowrap
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+input:checked+.slider {
+    background-color: #32cd32
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #32cd32
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px)
+}
+
+.slider.round {
+    border-radius: 7px
+}
+
+.slider.round:before {
+    border-radius: 7px
+}
+
+.switch-label {
+    color: #fff;
+    display: inline-block;
+    position: relative
+}
+
+.switchFieldSet {
+    float: right;
+    right: 3px;
+    top: 11px;
+    position: relative
+}
+
+.row {
+    white-space: nowrap
+}
