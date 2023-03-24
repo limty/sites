@@ -29,13 +29,21 @@ label {
 /* Layout */
 header {
   background-color: PaleTurquoise;
-  padding: 1rem;
+  padding: 1rem 1rem 0.7rem 1rem;
 }
 
 .header__title {
   white-space: nowrap;
 }
 
+.header__subtitle {
+  margin-top: 0.15rem;
+  font-size: 1.2rem;
+}
+
+.header__note {
+  margin-top: 0.3rem;
+}
 main {
   margin: 3rem auto 0;
   padding: 1rem;
@@ -43,6 +51,15 @@ main {
   background-color: PaleGreen;
   border-radius: 1rem;
   max-width: 720px;
+}
+
+.footer {
+  margin: 1.5rem;
+}
+
+.footer__text {
+  white-space: nowrap;
+  text-align: center;
 }
 
 /* Forms */
@@ -100,22 +117,7 @@ form {
   background-color: #368ea6;
 }
 
-.footer {
-  margin: 1.5rem;
-}
-
-.footer__text {
-  white-space: nowrap;
-  text-align: center;
-}
-
-.header__subtitle {
-  margin-top: 0.15rem;
-  font-size: 1.2rem;
-}
-
 /* Media Queries */
-
 @media (max-width: 900px) {
   main {
     margin: 2rem auto 0;
