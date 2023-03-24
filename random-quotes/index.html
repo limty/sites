@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A random quote generator created by LTY.">
+    <title>Random Quote Machine</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="quote-box-container">
+        <div class="card is-fullwidth-mobile" id="quote-box">
+            <div class="lty-name">
+                <a href="https://limty.github.io" target="_blank" aria-label="Link to developer's website">
+                    LTY
+                </a>
+            </div>
+            <div class="card-content">
+                <p class="title" id="text">
+                    Loading Quote...
+                </p>
+                <p class="subtitle" id="author">
+                    - LTY
+                </p>
+            </div>
+            <footer class="card-footer">
+                <p class="card-footer-item" id="tweet-quote-button">
+                    <span>
+                        <a id="tweet-quote">Tweet quote</a>
+                    </span>
+                </p>
+                <p class="card-footer-item">
+                    <span>
+                        <a id="new-quote">New quote</a>
+                    </span>
+                </p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
