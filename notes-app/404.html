@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting...</title>
+    <script>
+        (function () {
+            const path = window.location.pathname;
+            const hash = '#' + path;
+            const newURL = window.location.origin + '/' + hash;
+            window.location.replace(newURL);
+        })();
+    </script>
+</head>
+
+<body>
+    <h1>Redirecting...</h1>
+</body>
+
+</html>
