@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://tyli.ml/sites/notes-app/static/css/main.a4e282bc.css",
-    "main.js": "https://tyli.ml/sites/notes-app/static/js/main.624edd0c.js",
+    "main.js": "https://tyli.ml/sites/notes-app/static/js/main.2662bdf2.js",
     "static/js/496.de22c3d6.chunk.js": "https://tyli.ml/sites/notes-app/static/js/496.de22c3d6.chunk.js",
     "index.html": "https://tyli.ml/sites/notes-app/index.html",
     "main.a4e282bc.css.map": "https://tyli.ml/sites/notes-app/static/css/main.a4e282bc.css.map",
-    "main.624edd0c.js.map": "https://tyli.ml/sites/notes-app/static/js/main.624edd0c.js.map",
+    "main.2662bdf2.js.map": "https://tyli.ml/sites/notes-app/static/js/main.2662bdf2.js.map",
     "496.de22c3d6.chunk.js.map": "https://tyli.ml/sites/notes-app/static/js/496.de22c3d6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4e282bc.css",
-    "static/js/main.624edd0c.js"
+    "static/js/main.2662bdf2.js"
   ]
 }
